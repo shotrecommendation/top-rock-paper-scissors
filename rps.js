@@ -9,4 +9,17 @@ function getComputerChoice() {
   return rpsChoices[rpsNumber];
 };
 
-console.log(getComputerChoice());
+function getWinningMove(selectedMove) {
+  switch (selectedMove.toLowerCase()) {
+    case "rock":
+      return "paper";
+    case "paper":
+      return "scissors";
+    case "scissors":
+      return "rock"
+    default:
+      return `There is no such move in "Rock Paper Scissors" as \"${selectedMove}\"!`;
+  }
+};
+
+console.log(getWinningMove(getComputerChoice()))
